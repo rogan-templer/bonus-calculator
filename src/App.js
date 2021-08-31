@@ -8,8 +8,8 @@ function App() {
   return (
     <GlobalProvider>
       <Header />
-      <TargetResult />
       <KPIList />
+      <TargetResult />
     </GlobalProvider>
   );
 }

@@ -11,7 +11,7 @@ function KPIList() {
       <Employee />
       <ul>
         {kpis.map((kpi) => (
-          <h4>
+          <h4 key={kpi.id}>
             {kpi.type}: {kpi.target}
           </h4>
         ))}

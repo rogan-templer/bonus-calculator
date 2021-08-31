@@ -12,11 +12,11 @@ const initialState = {
     { id: 5, type: "Applications Converted Total", target: 100 },
   ],
   employees: [
-    { name: "Employee One" },
-    { name: "Employee Two" },
-    { name: "Employee Three" },
-    { name: "Employee Four" },
-    { name: "Employee Five" },
+    { id: 1, name: "Employee One" },
+    { id: 2, name: "Employee Two" },
+    { id: 3, name: "Employee Three" },
+    { id: 4, name: "Employee Four" },
+    { id: 5, name: "Employee Five" },
   ],
 };
 

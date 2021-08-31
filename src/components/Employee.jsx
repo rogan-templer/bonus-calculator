@@ -10,7 +10,7 @@ function Employee() {
         <label>Choose an employee:</label>
         <select>
           {employees.map((employee) => (
-            <option>{employee.name}</option>
+            <option key={employee.id}>{employee.name}</option>
           ))}
         </select>
       </form>
