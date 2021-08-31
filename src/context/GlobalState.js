@@ -11,6 +11,13 @@ const initialState = {
     { id: 4, type: "NPS Total", target: 100 },
     { id: 5, type: "Applications Converted Total", target: 100 },
   ],
+  employees: [
+    { name: "Employee One" },
+    { name: "Employee Two" },
+    { name: "Employee Three" },
+    { name: "Employee Four" },
+    { name: "Employee Five" },
+  ],
 };
 
 // Create context
@@ -58,6 +65,7 @@ export const GlobalProvider = ({ children }) => {
     <GlobalContext.Provider
       value={{
         kpis: state.kpis,
+        employees: state.employees,
       }}
     >
       {children}

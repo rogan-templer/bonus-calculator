@@ -8,11 +8,11 @@ function KPIList() {
 
   return (
     <>
+      <Employee />
       <ul>
         {kpis.map((kpi) => (
           <h4>
             {kpi.type}: {kpi.target}
-            <Employee />
           </h4>
         ))}
       </ul>

@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
 
 function Employee() {
+  const { employees } = useContext(GlobalContext);
+
   return (
     <>
-      <form />
+      <form>
+        <label>Choose an employee:</label>
+        <select>
+          {employees.map((employee) => (
+            <option>{employee.name}</option>
+          ))}
+        </select>
+      </form>
     </>
   );
 }
