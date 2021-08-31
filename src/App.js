@@ -1,13 +1,13 @@
 import Header from "./components/Header";
 import TargetResult from "./components/TargetResult";
-import KeyPerformanceIndicators from "./components/KeyPerformanceIndicators";
+import KPIList from "./components/KPIList";
 
 function App() {
   return (
     <div>
       <Header />
       <TargetResult />
-      <KeyPerformanceIndicators />
+      <KPIList />
     </div>
   );
 }

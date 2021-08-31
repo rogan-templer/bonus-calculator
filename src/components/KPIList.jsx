@@ -1,6 +1,6 @@
 import React from "react";
 
-function KeyPerformanceIndicators() {
+function KPIList() {
   return (
     <>
       <p>List of performance ratings here.</p>
@@ -8,4 +8,4 @@ function KeyPerformanceIndicators() {
   );
 }
 
-export default KeyPerformanceIndicators;
+export default KPIList;
