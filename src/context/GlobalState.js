@@ -6,10 +6,10 @@ import AppReducer from "./AppReducer";
 const initialState = {
   kpis: [
     { id: 1, type: "Sales", target: 100 },
-    { id: 2, type: "freeCalls", target: 55 },
-    { id: 3, type: "totalCalls", target: 1815 },
-    { id: 4, type: "npsTotal", target: 100 },
-    { id: 5, type: "appsConvertedTotal", target: 100 },
+    { id: 2, type: "Free Calls", target: 55 },
+    { id: 3, type: "Total Calls", target: 1815 },
+    { id: 4, type: "NPS Total", target: 100 },
+    { id: 5, type: "Applications Converted Total", target: 100 },
   ],
 };
 
