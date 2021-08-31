@@ -4,7 +4,7 @@ import { GlobalContext } from "../context/GlobalState";
 import Employee from "./Employee";
 
 function KPIList() {
-  const { kpis, employees } = useContext(GlobalContext);
+  const { kpis } = useContext(GlobalContext);
 
   return (
     <>
@@ -15,7 +15,7 @@ function KPIList() {
             {kpi.type}: {kpi.target}
             <br />
             <label>Achieved:</label>
-            <input type="text" />
+            <input type="number" />
           </form>
         ))}
       </ul>
