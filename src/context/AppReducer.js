@@ -3,7 +3,7 @@ export default (state, action) => {
     case "SALES_MADE":
       return {
         ...state,
-        kpis: [action.payload, ...state.kpis],
+        sales: [action.payload, ...state.sales],
       };
     default:
       return state;

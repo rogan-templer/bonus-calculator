@@ -29,31 +29,31 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
-  function freeCallsMade() {
-    dispatch({
-      type: "FREE_CALLS_MADE",
-      payload: ,
-    });
-  }
+  // function freeCallsMade() {
+  //   dispatch({
+  //     type: "FREE_CALLS_MADE",
+  //     payload: ,
+  //   });
+  // }
 
-  function totalCallsMade() {
-    dispatch({
-      type: "TOTAL_CALLS_MADE",
-      payload: ,
-    });
-  }
-  function npsScore() {
-    dispatch({
-      type: "NPS_SCORE",
-      payload: ,
-    });
-  }
-  function appsConverted() {
-    dispatch({
-      type: "APPS_CONVERTED",
-      payload: ,
-    });
-  }
+  // function totalCallsMade() {
+  //   dispatch({
+  //     type: "TOTAL_CALLS_MADE",
+  //     payload: ,
+  //   });
+  // }
+  // function npsScore() {
+  //   dispatch({
+  //     type: "NPS_SCORE",
+  //     payload: ,
+  //   });
+  // }
+  // function appsConverted() {
+  //   dispatch({
+  //     type: "APPS_CONVERTED",
+  //     payload: ,
+  //   });
+  // }
 
   return (
     <GlobalContext.Provider

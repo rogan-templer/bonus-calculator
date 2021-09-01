@@ -8,15 +8,7 @@ function KPIList() {
 
   return (
     <>
-      <ul>
-        {kpis.map((kpi) => (
-          <div key={kpi.id}>
-            <p>{kpi.text}</p>
-            <p>Target: {kpi.target}</p>
-            <p>Actual Achieved: {kpi.actual}</p>
-          </div>
-        ))}
-      </ul>
+      
     </>
   );
 }

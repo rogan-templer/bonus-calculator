@@ -16,6 +16,7 @@ function AddSales() {
       text,
       target: +target,
       actual: +actual,
+      salesPercentage: ((+actual / +target) * 30) / 100,
     };
 
     salesMade(newSales);
