@@ -10,6 +10,11 @@ export default (state, action) => {
         ...state,
         freeCalls: [action.payload, ...state.freeCalls],
       };
+    case "TOTAL_CALLS_MADE":
+      return {
+        ...state,
+        totalCalls: [action.payload, ...state.totalCalls],
+      };
     default:
       return state;
   }

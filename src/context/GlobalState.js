@@ -6,6 +6,7 @@ import AppReducer from "./AppReducer";
 const initialState = {
   sales: [],
   freeCalls: [],
+  totalCalls: [],
   employees: [
     { id: 1, name: "Employee One" },
     { id: 2, name: "Employee Two" },
@@ -37,12 +38,13 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
-  // function totalCallsMade() {
-  //   dispatch({
-  //     type: "TOTAL_CALLS_MADE",
-  //     payload: ,
-  //   });
-  // }
+  function totalCallsMade(totalCalls) {
+    dispatch({
+      type: "TOTAL_CALLS_MADE",
+      payload: totalCalls,
+    });
+  }
+
   // function npsScore() {
   //   dispatch({
   //     type: "NPS_SCORE",
@@ -61,9 +63,11 @@ export const GlobalProvider = ({ children }) => {
       value={{
         sales: state.sales,
         freeCalls: state.freeCalls,
+        totalCalls: state.totalCalls,
         employees: state.employees,
         salesMade,
         freeCallsMade,
+        totalCallsMade,
       }}
     >
       {children}
