@@ -25,6 +25,18 @@ export default (state, action) => {
         ...state,
         appsConverted: [action.payload, ...state.appsConverted],
       };
+    case "OVERALL_SCORE":
+      return {
+        ...state,
+        salesPercentage: [action.payload, ...state.salesPercentage],
+        freeCallsPercentage: [action.payload, ...state.freeCallsPercentage],
+        totalCallsPercentage: [action.payload, ...state.totalCallsPercentage],
+        npsPercentage: [action.payload, ...state.npsPercentage],
+        appsConvertedPercentage: [
+          action.payload,
+          ...state.appsConvertedPercentage,
+        ],
+      };
     default:
       return state;
   }

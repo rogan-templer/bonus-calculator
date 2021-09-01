@@ -61,6 +61,17 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+  function overallScore(salesPercentage, freeCallsPercentage, totalCallsPercentage, npsPercentage, appsConvertedPercentage) {
+    dispatch({
+      type: "OVERALL_SCORE",
+      payload: salesPercentage,
+      freeCallsPercentage,
+      totalCallsPercentage,
+      npsPercentage,
+      appsConvertedPercentage,
+    });
+  }
+
   return (
     <GlobalContext.Provider
       value={{
@@ -75,6 +86,7 @@ export const GlobalProvider = ({ children }) => {
         totalCallsMade,
         npsMade,
         appsConvertedMade,
+        overallScore,
       }}
     >
       {children}

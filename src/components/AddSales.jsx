@@ -1,10 +1,12 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import PercentResult from "./PercentResult";
 
 function AddSales() {
   const [text, setText] = useState("");
   const [target, setTarget] = useState("");
   const [actual, setActual] = useState("");
+  const [salesPercentage, setSalesPercentage] = useState("");
 
   const { salesMade } = useContext(GlobalContext);
 
@@ -52,6 +54,9 @@ function AddSales() {
           />
         </div>
         <button>Add KPI Information</button>
+        <div>
+          <PercentResult />
+        </div>
       </form>
     </>
   );

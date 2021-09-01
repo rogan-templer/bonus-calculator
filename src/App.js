@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import TargetResult from "./components/TargetResult";
+
 import KPIList from "./components/KPIList";
 
 import { GlobalProvider } from "./context/GlobalState";
@@ -10,6 +10,7 @@ import AddFreeCalls from "./components/AddFreeCalls";
 import AddTotalCalls from "./components/AddTotalCalls";
 import AddNps from "./components/AddNps";
 import AddAppsConverted from "./components/AppsConverted";
+import OverallResult from "./components/OverallResult";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <AddTotalCalls />
       <AddNps />
       <AddAppsConverted />
+      <OverallResult />
     </GlobalProvider>
   );
 }
