@@ -2,30 +2,29 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 
 const OverallResult = () => {
-  const [answer, setAnswer] = useState("");
+  // const [answer, setAnswer] = useState(0);
 
-  const {
-    salesPercentage,
-    freeCallsPercentage,
-    totalCallsPercentage,
-    npsPercentage,
-    appsConvertedPercentage,
-  } = useContext(GlobalContext);
+  const { sales, freeCalls, totalCalls, nps, appsConverted } = useContext(
+    GlobalContext
+  );
 
-  function result() {
-    setAnswer(
-      (salesPercentage +
-        freeCallsPercentage +
-        totalCallsPercentage +
-        npsPercentage +
-        appsConvertedPercentage) *
-        100
-    );
-  }
+  const salesFinal = sales.salesPercentage;
+  const freeCallsFinal = freeCalls.freeCallsPercentage;
+  const totalCallsFinal = totalCalls.totalCallsPercentage;
+  const npsFinal = nps.npsPercentage;
+  const appsConvertedFinal = appsConverted.appsConvertedPercentage;
+
+  const result =
+    (salesFinal +
+      freeCallsFinal +
+      totalCallsFinal +
+      npsFinal +
+      appsConvertedFinal) *
+    100;
+
   return (
     <>
-      <button onClick={result}>The final overall Score:</button>
-      <h4>{isNaN(answer)}</h4>
+      <h4>{parseFloat(result)}</h4>
     </>
   );
 };
