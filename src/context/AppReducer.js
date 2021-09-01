@@ -5,6 +5,11 @@ export default (state, action) => {
         ...state,
         sales: [action.payload, ...state.sales],
       };
+    case "FREE_CALLS_MADE":
+      return {
+        ...state,
+        freeCalls: [action.payload, ...state.freeCalls],
+      };
     default:
       return state;
   }

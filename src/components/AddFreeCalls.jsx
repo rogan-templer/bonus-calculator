@@ -6,26 +6,26 @@ function AddSales() {
   const [target, setTarget] = useState("");
   const [actual, setActual] = useState("");
 
-  const { salesMade } = useContext(GlobalContext);
+  const { freeCallsMade } = useContext(GlobalContext);
 
   const onSubmit = (e) => {
     e.preventDefault();
 
-    const newSales = {
+    const newFreeCalls = {
       id: Math.floor(Math.random() * 100000000),
       text,
       target: +target,
       actual: +actual,
-      salesPercentage: ((+actual / +target) * 30) / 100,
+      freeCallsPercentage: ((+actual / +target) * 10) / 100,
     };
 
-    salesMade(newSales);
+    freeCallsMade(newFreeCalls);
   };
   return (
     <>
       <form onSubmit={onSubmit}>
         <div>
-          <label htmlFor="text">Sales KPI</label>
+          <label htmlFor="text">Free Calls KPI</label>
           <input
             type="text"
             value={text}

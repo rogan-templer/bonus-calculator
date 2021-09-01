@@ -5,6 +5,7 @@ import AppReducer from "./AppReducer";
 
 const initialState = {
   sales: [],
+  freeCalls: [],
   employees: [
     { id: 1, name: "Employee One" },
     { id: 2, name: "Employee Two" },
@@ -29,12 +30,12 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
-  // function freeCallsMade() {
-  //   dispatch({
-  //     type: "FREE_CALLS_MADE",
-  //     payload: ,
-  //   });
-  // }
+  function freeCallsMade(freeCalls) {
+    dispatch({
+      type: "FREE_CALLS_MADE",
+      payload: freeCalls,
+    });
+  }
 
   // function totalCallsMade() {
   //   dispatch({
@@ -59,8 +60,10 @@ export const GlobalProvider = ({ children }) => {
     <GlobalContext.Provider
       value={{
         sales: state.sales,
+        freeCalls: state.freeCalls,
         employees: state.employees,
         salesMade,
+        freeCallsMade,
       }}
     >
       {children}
