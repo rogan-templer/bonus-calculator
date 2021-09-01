@@ -1,9 +1,17 @@
 import React from "react";
 
 function TargetResult() {
+//   const overallScore =
+//   (salesPercentage +
+//     freeCallsPercentage +
+//     totalCallsPercentage +
+//     npsPercentage +
+//     appsConvertedPercentage) *
+//   100;
+
   return (
     <>
-      <h2>Overall target Achieved:</h2>
+      <h2>hi</h2>
     </>
   );
 }

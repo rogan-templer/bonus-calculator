@@ -4,13 +4,7 @@ import AppReducer from "./AppReducer";
 //Initial State
 
 const initialState = {
-  kpis: [
-    { id: 1, type: "Sales Target", target: 100 },
-    { id: 2, type: "Free Calls Target", target: 55 },
-    { id: 3, type: "Total Calls Target", target: 1815 },
-    { id: 4, type: "NPS Total Target", target: 100 },
-    { id: 5, type: "Applications Converted Total Target", target: 100 },
-  ],
+  sales: [],
   employees: [
     { id: 1, name: "Employee One" },
     { id: 2, name: "Employee Two" },
@@ -28,44 +22,45 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   // // Actions
-  // function salesPercentage(sales) {
-  //   dispatch({
-  //     type: "SALES_PERCENTAGE",
-  //     payload: sales,
-  //   });
-  // }
+  function salesMade(sales) {
+    dispatch({
+      type: "SALES_MADE",
+      payload: sales,
+    });
+  }
 
-  // function freeCallsPercentage(freeCalls) {
-  //   dispatch({
-  //     type: "FREE_CALLS_PERCENTAGE",
-  //     payload: freeCalls,
-  //   });
-  // }
+  function freeCallsMade() {
+    dispatch({
+      type: "FREE_CALLS_MADE",
+      payload: ,
+    });
+  }
 
-  // function totalCallsPercentage(totalCalls) {
-  //   dispatch({
-  //     type: "TOTAL_CALLS_PERCENTAGE",
-  //     payload: totalCalls,
-  //   });
-  // }
-  // function npsPercentage(npsTotal) {
-  //   dispatch({
-  //     type: "NPS_PERCENTAGE",
-  //     payload: npsTotal,
-  //   });
-  // }
-  // function appsConvertedPercentage(appsConvertedTotal) {
-  //   dispatch({
-  //     type: "APPS_CONVERTED_PERCENTAGE",
-  //     payload: appsConvertedTotal,
-  //   });
-  // }
+  function totalCallsMade() {
+    dispatch({
+      type: "TOTAL_CALLS_MADE",
+      payload: ,
+    });
+  }
+  function npsScore() {
+    dispatch({
+      type: "NPS_SCORE",
+      payload: ,
+    });
+  }
+  function appsConverted() {
+    dispatch({
+      type: "APPS_CONVERTED",
+      payload: ,
+    });
+  }
 
   return (
     <GlobalContext.Provider
       value={{
-        kpis: state.kpis,
+        sales: state.sales,
         employees: state.employees,
+        salesMade,
       }}
     >
       {children}

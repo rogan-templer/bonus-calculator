@@ -8,15 +8,13 @@ function KPIList() {
 
   return (
     <>
-      <Employee />
       <ul>
         {kpis.map((kpi) => (
-          <form key={kpi.id}>
-            {kpi.type}: {kpi.target}
-            <br />
-            <label>Achieved:</label>
-            <input type="number" />
-          </form>
+          <div key={kpi.id}>
+            <p>{kpi.text}</p>
+            <p>Target: {kpi.target}</p>
+            <p>Actual Achieved: {kpi.actual}</p>
+          </div>
         ))}
       </ul>
     </>
