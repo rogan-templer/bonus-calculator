@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import PercentResult from "./PercentResult";
 
 function AddSales() {
   const [text, setText] = useState("");
@@ -8,26 +7,25 @@ function AddSales() {
   const [actual, setActual] = useState("");
   const [salesPercentage, setSalesPercentage] = useState("");
 
-  const { salesMade } = useContext(GlobalContext);
+  const { addKpi } = useContext(GlobalContext);
 
   const onSubmit = (e) => {
     e.preventDefault();
 
-    const newSales = {
+    const newKpi = {
       id: Math.floor(Math.random() * 100000000),
-      text,
+      kpi: text,
       target: +target,
       actual: +actual,
-      salesPercentage: ((+actual / +target) * 30) / 100,
     };
 
-    salesMade(newSales);
+    addKpi(newKpi);
   };
   return (
     <>
       <form onSubmit={onSubmit}>
         <div>
-          <label htmlFor="text">Sales KPI</label>
+          <label htmlFor="text">Specific KPI</label>
           <input
             type="text"
             value={text}
@@ -54,9 +52,6 @@ function AddSales() {
           />
         </div>
         <button>Add KPI Information</button>
-        <div>
-          <PercentResult />
-        </div>
       </form>
     </>
   );

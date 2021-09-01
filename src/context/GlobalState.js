@@ -4,11 +4,8 @@ import AppReducer from "./AppReducer";
 //Initial State
 
 const initialState = {
-  sales: [],
-  freeCalls: [],
-  totalCalls: [],
-  nps: [],
-  appsConverted: [],
+  kpis: [],
+
   employees: [
     { id: 1, name: "Employee One" },
     { id: 2, name: "Employee Two" },
@@ -26,67 +23,64 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   // // Actions
-  function salesMade(sales) {
+  function addKpi(kpi) {
     dispatch({
-      type: "SALES_MADE",
-      payload: sales,
+      type: "ADD_KPI",
+      payload: kpi,
     });
   }
 
-  function freeCallsMade(freeCalls) {
-    dispatch({
-      type: "FREE_CALLS_MADE",
-      payload: freeCalls,
-    });
-  }
+  // function freeCallsMade(freeCalls) {
+  //   dispatch({
+  //     type: "FREE_CALLS_MADE",
+  //     payload: freeCalls,
+  //   });
+  // }
 
-  function totalCallsMade(totalCalls) {
-    dispatch({
-      type: "TOTAL_CALLS_MADE",
-      payload: totalCalls,
-    });
-  }
+  // function totalCallsMade(totalCalls) {
+  //   dispatch({
+  //     type: "TOTAL_CALLS_MADE",
+  //     payload: totalCalls,
+  //   });
+  // }
 
-  function npsMade(nps) {
-    dispatch({
-      type: "NPS_MADE",
-      payload: nps,
-    });
-  }
+  // function npsMade(nps) {
+  //   dispatch({
+  //     type: "NPS_MADE",
+  //     payload: nps,
+  //   });
+  // }
 
-  function appsConvertedMade(appsConverted) {
-    dispatch({
-      type: "APPS_CONVERTED_MADE",
-      payload: appsConverted,
-    });
-  }
+  // function appsConvertedMade(appsConverted) {
+  //   dispatch({
+  //     type: "APPS_CONVERTED_MADE",
+  //     payload: appsConverted,
+  //   });
+  // }
 
-  function overallScore(salesPercentage, freeCallsPercentage, totalCallsPercentage, npsPercentage, appsConvertedPercentage) {
-    dispatch({
-      type: "OVERALL_SCORE",
-      payload: salesPercentage,
-      freeCallsPercentage,
-      totalCallsPercentage,
-      npsPercentage,
-      appsConvertedPercentage,
-    });
-  }
+  // function overallScore(
+  //   salesPercentage,
+  //   freeCallsPercentage,
+  //   totalCallsPercentage,
+  //   npsPercentage,
+  //   appsConvertedPercentage
+  // ) {
+  //   dispatch({
+  //     type: "OVERALL_SCORE",
+  //     payload: salesPercentage,
+  //     freeCallsPercentage,
+  //     totalCallsPercentage,
+  //     npsPercentage,
+  //     appsConvertedPercentage,
+  //   });
+  // }
 
   return (
     <GlobalContext.Provider
       value={{
-        sales: state.sales,
-        freeCalls: state.freeCalls,
-        totalCalls: state.totalCalls,
-        nps: state.nps,
-        appsConverted: state.appsConverted,
+        kpis: state.kpis,
         employees: state.employees,
-        salesMade,
-        freeCallsMade,
-        totalCallsMade,
-        npsMade,
-        appsConvertedMade,
-        overallScore,
+        addKpi,
       }}
     >
       {children}
