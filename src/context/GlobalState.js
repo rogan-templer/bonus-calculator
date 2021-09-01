@@ -7,6 +7,8 @@ const initialState = {
   sales: [],
   freeCalls: [],
   totalCalls: [],
+  nps: [],
+  appsConverted: [],
   employees: [
     { id: 1, name: "Employee One" },
     { id: 2, name: "Employee Two" },
@@ -45,18 +47,19 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
-  // function npsScore() {
-  //   dispatch({
-  //     type: "NPS_SCORE",
-  //     payload: ,
-  //   });
-  // }
-  // function appsConverted() {
-  //   dispatch({
-  //     type: "APPS_CONVERTED",
-  //     payload: ,
-  //   });
-  // }
+  function npsMade(nps) {
+    dispatch({
+      type: "NPS_MADE",
+      payload: nps,
+    });
+  }
+
+  function appsConvertedMade(appsConverted) {
+    dispatch({
+      type: "APPS_CONVERTED_MADE",
+      payload: appsConverted,
+    });
+  }
 
   return (
     <GlobalContext.Provider
@@ -64,10 +67,14 @@ export const GlobalProvider = ({ children }) => {
         sales: state.sales,
         freeCalls: state.freeCalls,
         totalCalls: state.totalCalls,
+        nps: state.nps,
+        appsConverted: state.appsConverted,
         employees: state.employees,
         salesMade,
         freeCallsMade,
         totalCallsMade,
+        npsMade,
+        appsConvertedMade,
       }}
     >
       {children}
