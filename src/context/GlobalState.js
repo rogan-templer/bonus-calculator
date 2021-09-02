@@ -4,7 +4,11 @@ import AppReducer from "./AppReducer";
 //Initial State
 
 const initialState = {
-  kpis: [],
+  sales: [],
+  freeCalls: [],
+  totalCalls: [],
+  nps: [],
+  appsConverted: [],
 
   employees: [
     { id: 1, name: "Employee One" },
@@ -23,40 +27,40 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   // // Actions
-  function addKpi(kpi) {
+  function addSale(sale) {
     dispatch({
-      type: "ADD_KPI",
-      payload: kpi,
+      type: "ADD_SALE",
+      payload: sale,
     });
   }
 
-  // function freeCallsMade(freeCalls) {
-  //   dispatch({
-  //     type: "FREE_CALLS_MADE",
-  //     payload: freeCalls,
-  //   });
-  // }
+  function freeCallsMade(freeCalls) {
+    dispatch({
+      type: "FREE_CALLS_MADE",
+      payload: freeCalls,
+    });
+  }
 
-  // function totalCallsMade(totalCalls) {
-  //   dispatch({
-  //     type: "TOTAL_CALLS_MADE",
-  //     payload: totalCalls,
-  //   });
-  // }
+  function totalCallsMade(totalCalls) {
+    dispatch({
+      type: "TOTAL_CALLS_MADE",
+      payload: totalCalls,
+    });
+  }
 
-  // function npsMade(nps) {
-  //   dispatch({
-  //     type: "NPS_MADE",
-  //     payload: nps,
-  //   });
-  // }
+  function npsMade(nps) {
+    dispatch({
+      type: "NPS_MADE",
+      payload: nps,
+    });
+  }
 
-  // function appsConvertedMade(appsConverted) {
-  //   dispatch({
-  //     type: "APPS_CONVERTED_MADE",
-  //     payload: appsConverted,
-  //   });
-  // }
+  function appsConvertedMade(appsConverted) {
+    dispatch({
+      type: "APPS_CONVERTED_MADE",
+      payload: appsConverted,
+    });
+  }
 
   // function overallScore(
   //   salesPercentage,
@@ -78,12 +82,35 @@ export const GlobalProvider = ({ children }) => {
   return (
     <GlobalContext.Provider
       value={{
-        kpis: state.kpis,
+        sales: state.sales,
         employees: state.employees,
-        addKpi,
+        addSale,
+        freeCallsMade,
+        totalCallsMade,
+        npsMade,
+        appsConvertedMade,
       }}
     >
       {children}
     </GlobalContext.Provider>
   );
 };
+
+// <div>
+// <label htmlFor="text">Specific KPI</label>
+// <input
+//   type="text"
+//   value={text}
+//   onChange={(e) => setText(e.target.value)}
+//   placeholder="Enter KPI Name..."
+// />
+// </div>
+// <div>
+// <label>Target</label>
+// <input
+//   type="number"
+//   value={target}
+//   onChange={(e) => setTarget(e.target.value)}
+//   placeholder="Enter target amount"
+// />
+// </div>
