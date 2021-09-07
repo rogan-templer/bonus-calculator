@@ -95,22 +95,3 @@ export const GlobalProvider = ({ children }) => {
     </GlobalContext.Provider>
   );
 };
-
-// <div>
-// <label htmlFor="text">Specific KPI</label>
-// <input
-//   type="text"
-//   value={text}
-//   onChange={(e) => setText(e.target.value)}
-//   placeholder="Enter KPI Name..."
-// />
-// </div>
-// <div>
-// <label>Target</label>
-// <input
-//   type="number"
-//   value={target}
-//   onChange={(e) => setTarget(e.target.value)}
-//   placeholder="Enter target amount"
-// />
-// </div>
