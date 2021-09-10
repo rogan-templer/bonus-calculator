@@ -12,7 +12,11 @@ function AddSales() {
     e.preventDefault();
 
     const newSale = {
+      id: Math.floor(Math.random() * 100000000),
+      text,
+      target: +target,
       actual: +actual,
+      salesPercentage: ((+actual / +target) * 30) / 100,
     };
 
     addSale(newSale);
