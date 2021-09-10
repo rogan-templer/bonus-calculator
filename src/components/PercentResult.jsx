@@ -6,6 +6,14 @@ function PercentResult() {
     GlobalContext
   );
 
+  const results =
+    (sales.salesPercentage +
+      freeCalls.freeCallsPercentage +
+      totalCalls.totalCallsPercentage +
+      nps.npsPercentage +
+      appsConverted.appsConvertedPercentage) *
+    100;
+
   return (
     <>
       <h4>Sales</h4>
@@ -68,6 +76,9 @@ function PercentResult() {
           );
         })}
       </ul>
+      <div>
+        <h1>Overall Score: {Math.floor(results)}</h1>
+      </div>
     </>
   );
 }
