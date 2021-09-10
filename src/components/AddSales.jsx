@@ -8,6 +8,8 @@ function AddSales() {
 
   const { addSale } = useContext(GlobalContext);
 
+  console.log("addSale", addSale);
+
   const onSubmit = (e) => {
     e.preventDefault();
 

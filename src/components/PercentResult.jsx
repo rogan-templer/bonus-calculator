@@ -6,6 +6,8 @@ function PercentResult() {
     GlobalContext
   );
 
+  console.log("sales", sales.salesPercentage);
+
   const results =
     (sales.salesPercentage +
       freeCalls.freeCallsPercentage +
@@ -77,7 +79,7 @@ function PercentResult() {
         })}
       </ul>
       <div>
-        <h1>Overall Score: {Math.floor(results)}</h1>
+        <h1>Overall Score: {Math.floor(results)} %</h1>
       </div>
     </>
   );
