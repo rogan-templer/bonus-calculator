@@ -1,7 +1,5 @@
 import Header from "./components/Header";
 
-import KPIList from "./components/KPIList";
-
 import { GlobalProvider } from "./context/GlobalState";
 
 import Employee from "./components/Employee";
