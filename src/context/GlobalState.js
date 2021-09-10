@@ -83,6 +83,10 @@ export const GlobalProvider = ({ children }) => {
     <GlobalContext.Provider
       value={{
         sales: state.sales,
+        freeCalls: state.freeCalls,
+        totalCalls: state.totalCalls,
+        nps: state.nps,
+        appsConverted: state.appsConverted,
         employees: state.employees,
         addSale,
         freeCallsMade,
