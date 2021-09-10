@@ -16,7 +16,7 @@ function AddNps() {
       text,
       target: +target,
       actual: +actual,
-      freeCallsPercentage: ((+actual / +target) * 20) / 100,
+      npsPercentage: ((+actual / +target) * 20) / 100,
     };
 
     npsMade(newNps);
@@ -25,7 +25,7 @@ function AddNps() {
     <>
       <form onSubmit={onSubmit}>
         <div>
-          <label htmlFor="text">Free Calls KPI</label>
+          <label htmlFor="text">NPS KPI</label>
           <input
             type="text"
             value={text}

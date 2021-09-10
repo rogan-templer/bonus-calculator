@@ -16,7 +16,7 @@ function AddAppsConverted() {
       text,
       target: +target,
       actual: +actual,
-      freeCallsPercentage: ((+actual / +target) * 20) / 100,
+      appsConvertedPercentage: ((+actual / +target) * 20) / 100,
     };
 
     appsConvertedMade(newAppsConverted);
@@ -25,7 +25,7 @@ function AddAppsConverted() {
     <>
       <form onSubmit={onSubmit}>
         <div>
-          <label htmlFor="text">Free Calls KPI</label>
+          <label htmlFor="text">Applications Converted KPI</label>
           <input
             type="text"
             value={text}

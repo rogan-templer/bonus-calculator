@@ -16,7 +16,7 @@ function AddTotalCalls() {
       text,
       target: +target,
       actual: +actual,
-      freeCallsPercentage: ((+actual / +target) * 10) / 100,
+      totalCallsPercentage: ((+actual / +target) * 10) / 100,
     };
 
     totalCallsMade(newTotalCalls);
@@ -25,7 +25,7 @@ function AddTotalCalls() {
     <>
       <form onSubmit={onSubmit}>
         <div>
-          <label htmlFor="text">Free Calls KPI</label>
+          <label htmlFor="text">Total Calls KPI</label>
           <input
             type="text"
             value={text}
