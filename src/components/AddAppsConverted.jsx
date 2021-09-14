@@ -23,7 +23,7 @@ function AddAppsConverted() {
   };
   return (
     <>
-      <form onSubmit={onSubmit} className="col-span-4">
+      <form onSubmit={onSubmit} className="">
         <div>
           <label htmlFor="text">KPI</label>
           <input

@@ -16,7 +16,7 @@ function App() {
       <GlobalProvider>
         <Header />
         <Employee />
-        <div className="grid grid-cols-12 gap-3">
+        <div className="grid grid-cols-3 gap-3">
           <AddSales />
           <AddTotalCalls />
           <AddFreeCalls />
