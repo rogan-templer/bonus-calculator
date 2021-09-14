@@ -12,7 +12,7 @@ import AddTotalCalls from "./components/AddTotalCalls";
 
 function App() {
   return (
-    <div className="md: container md:mx-auto">
+    <div className="md: container md:mx-auto container-size">
       <GlobalProvider>
         <Header />
         <Employee />

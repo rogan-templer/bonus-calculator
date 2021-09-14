@@ -3,7 +3,9 @@ import React from "react";
 function Header() {
   return (
     <>
-      <h1>This is your Bonus Calculator</h1>
+      <div className="text-center m-1">
+        <h1>This is your Bonus Calculator</h1>
+      </div>
     </>
   );
 }
