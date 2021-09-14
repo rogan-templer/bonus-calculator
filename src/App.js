@@ -12,16 +12,20 @@ import AddTotalCalls from "./components/AddTotalCalls";
 
 function App() {
   return (
-    <GlobalProvider>
-      <Header />
-      <Employee />
-      <AddSales />
-      <AddTotalCalls />
-      <AddFreeCalls />
-      <AddAppsConverted />
-      <AddNps />
-      <PercentResult />
-    </GlobalProvider>
+    <div className="md: container md:mx-auto">
+      <GlobalProvider>
+        <Header />
+        <Employee />
+        <div className="grid grid-cols-12 gap-3">
+          <AddSales />
+          <AddTotalCalls />
+          <AddFreeCalls />
+          <AddAppsConverted />
+          <AddNps />
+        </div>
+        <PercentResult />
+      </GlobalProvider>
+    </div>
   );
 }
 
