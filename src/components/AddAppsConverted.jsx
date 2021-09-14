@@ -25,7 +25,7 @@ function AddAppsConverted() {
     <>
       <form onSubmit={onSubmit} className="col-span-4">
         <div>
-          <label htmlFor="text">Applications Converted KPI</label>
+          <label htmlFor="text">KPI</label>
           <input
             type="text"
             value={text}

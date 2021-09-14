@@ -25,7 +25,7 @@ function AddTotalCalls() {
     <>
       <form onSubmit={onSubmit}>
         <div>
-          <label htmlFor="text">Total Calls KPI</label>
+          <label htmlFor="text">KPI</label>
           <input
             type="text"
             value={text}
