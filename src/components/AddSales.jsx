@@ -25,37 +25,39 @@ function AddSales() {
   };
   return (
     <>
-      <form onSubmit={onSubmit}>
-        <div>
-          <label htmlFor="text">KPI</label>
-          <input
-            type="text"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            placeholder="Enter KPI Name..."
-          />
-        </div>
-        <div>
-          <label>Target</label>
-          <input
-            type="number"
-            value={target}
-            onChange={(e) => setTarget(e.target.value)}
-            placeholder="Enter target amount"
-          />
-        </div>
+      <div className="form-style">
+        <form onSubmit={onSubmit} className="kpi-tile">
+          <div>
+            <label htmlFor="text">KPI</label>
+            <input
+              type="text"
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              placeholder="Enter KPI Name..."
+            />
+          </div>
+          <div>
+            <label>Target</label>
+            <input
+              type="number"
+              value={target}
+              onChange={(e) => setTarget(e.target.value)}
+              placeholder="Enter target amount"
+            />
+          </div>
 
-        <div>
-          <label>Actual</label>
-          <input
-            type="number"
-            value={actual}
-            onChange={(e) => setActual(e.target.value)}
-            placeholder="Enter actual amount achieved"
-          />
-        </div>
-        <button>Add KPI Information</button>
-      </form>
+          <div>
+            <label>Actual</label>
+            <input
+              type="number"
+              value={actual}
+              onChange={(e) => setActual(e.target.value)}
+              placeholder="Enter actual amount achieved"
+            />
+          </div>
+          <button>Add KPI Information</button>
+        </form>
+      </div>
     </>
   );
 }

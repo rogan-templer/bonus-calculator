@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-.container-size {
-  margin: 2rem;
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.kpi-tile {
+  background-color: #1582b8;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.form-style {
+  display: block;
+  text-align: center;
+}
+
+input[type="text"] {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+input[type="number"] {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+button {
+  background-color: #10678f;
+  color: #ffffff;
+  padding: 5px;
+  margin: 2px;
+  border-radius: 5px;
 }
