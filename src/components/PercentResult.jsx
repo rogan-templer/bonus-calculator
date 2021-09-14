@@ -6,7 +6,7 @@ function PercentResult() {
     GlobalContext
   );
 
-  console.log("sales", sales.salesPercentage);
+  console.log("sales", sales);
 
   const results =
     (sales.salesPercentage +
