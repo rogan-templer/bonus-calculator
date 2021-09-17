@@ -18,12 +18,12 @@ function App() {
         <Employee />
         <div className="grid grid-cols-3 gap-x-4 gap-y-4">
           <AddSales />
-          <AddFreeCalls />
           <AddTotalCalls />
+          <AddFreeCalls />
           <AddAppsConverted />
           <AddNps />
         </div>
-        <div>
+        <div className="inline-flex">
           <PercentResult />
         </div>
       </div>

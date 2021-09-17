@@ -6,7 +6,7 @@ function PercentResult() {
     GlobalContext
   );
 
-  console.log("sales", sales);
+  // console.log("sales", sales);
 
   const salesResults = sales.map((sale) => sale.salesPercentage);
   const totalCallsResult = totalCalls.map(
@@ -28,7 +28,7 @@ function PercentResult() {
       +npsResult) *
     100;
 
-  console.log("sales results", salesResults);
+  // console.log("sales results", salesResults);
 
   return (
     <>
@@ -105,7 +105,6 @@ function PercentResult() {
             );
           })}
         </ul>
-
         <div>
           <h1>Overall Score: {Math.floor(results)} %</h1>
         </div>
