@@ -8,13 +8,27 @@ function PercentResult() {
 
   console.log("sales", sales);
 
+  const salesResults = sales.map((sale) => sale.salesPercentage);
+  const totalCallsResult = totalCalls.map(
+    (totalCall) => totalCall.totalCallsPercentage
+  );
+  const freeCallsResult = freeCalls.map(
+    (freeCall) => freeCall.freeCallsPercentage
+  );
+  const appsConvertedResult = appsConverted.map(
+    (appConvert) => appConvert.appsConvertedPercentage
+  );
+  const npsResult = nps.map((np) => np.npsPercentage);
+
   const results =
-    (sales.salesPercentage +
-      freeCalls.freeCallsPercentage +
-      totalCalls.totalCallsPercentage +
-      nps.npsPercentage +
-      appsConverted.appsConvertedPercentage) *
+    (+salesResults +
+      +totalCallsResult +
+      +freeCallsResult +
+      +appsConvertedResult +
+      +npsResult) *
     100;
+
+  console.log("sales results", salesResults);
 
   return (
     <>
@@ -28,7 +42,7 @@ function PercentResult() {
                 <li>{sale.text}</li>
                 <li>{sale.target}</li>
                 <li>{sale.actual}</li>
-                <li>{sale.salesPercentage * 100}%</li>
+                <li>{Math.floor(sale.salesPercentage * 100)}%</li>
               </div>
             );
           })}
@@ -42,7 +56,7 @@ function PercentResult() {
                 <li>{totalCall.text}</li>
                 <li>{totalCall.target}</li>
                 <li>{totalCall.actual}</li>
-                <li>{totalCall.totalCallsPercentage * 100}%</li>
+                <li>{Math.floor(totalCall.totalCallsPercentage * 100)}%</li>
               </div>
             );
           })}
@@ -56,7 +70,7 @@ function PercentResult() {
                 <li>{freeCall.text}</li>
                 <li>{freeCall.target}</li>
                 <li>{freeCall.actual}</li>
-                <li>{freeCall.freeCallsPercentage * 100}%</li>
+                <li>{Math.floor(freeCall.freeCallsPercentage * 100)}%</li>
               </div>
             );
           })}
@@ -70,7 +84,9 @@ function PercentResult() {
                 <li>{appsConvert.text}</li>
                 <li>{appsConvert.target}</li>
                 <li>{appsConvert.actual}</li>
-                <li>{appsConvert.appsConvertedPercentage * 100}%</li>
+                <li>
+                  {Math.floor(appsConvert.appsConvertedPercentage * 100)}%
+                </li>
               </div>
             );
           })}
@@ -84,7 +100,7 @@ function PercentResult() {
                 <li>{np.text}</li>
                 <li>{np.target}</li>
                 <li>{np.actual}</li>
-                <li>{np.npsPercentage * 100}%</li>
+                <li>{Math.floor(np.npsPercentage * 100)}%</li>
               </div>
             );
           })}
