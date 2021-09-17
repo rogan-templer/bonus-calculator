@@ -13,7 +13,6 @@ function AddNps() {
 
     const newNps = {
       id: Math.floor(Math.random() * 100000000),
-      text,
       target: +target,
       actual: +actual,
       npsPercentage: ((+actual / +target) * 20) / 100,
@@ -26,13 +25,7 @@ function AddNps() {
       <div className="form-style">
         <form onSubmit={onSubmit} className="kpi-tile">
           <div>
-            <label htmlFor="text">KPI</label>
-            <input
-              type="text"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              placeholder="Enter KPI Name..."
-            />
+            <label htmlFor="text">NPS KPI</label>
           </div>
           <div>
             <label>Target</label>

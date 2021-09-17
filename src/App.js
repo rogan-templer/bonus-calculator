@@ -23,7 +23,9 @@ function App() {
           <AddAppsConverted />
           <AddNps />
         </div>
-        <PercentResult />
+        <div>
+          <PercentResult />
+        </div>
       </div>
     </GlobalProvider>
   );

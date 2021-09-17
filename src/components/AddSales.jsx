@@ -15,7 +15,6 @@ function AddSales() {
 
     const newSale = {
       id: Math.floor(Math.random() * 100000000),
-      text,
       target: +target,
       actual: +actual,
       salesPercentage: ((+actual / +target) * 30) / 100,
@@ -28,13 +27,7 @@ function AddSales() {
       <div className="form-style">
         <form onSubmit={onSubmit} className="kpi-tile">
           <div>
-            <label htmlFor="text">KPI</label>
-            <input
-              type="text"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              placeholder="Enter KPI Name..."
-            />
+            <label htmlFor="text">Sales KPI</label>
           </div>
           <div>
             <label>Target</label>

@@ -13,7 +13,6 @@ function AddAppsConverted() {
 
     const newAppsConverted = {
       id: Math.floor(Math.random() * 100000000),
-      text,
       target: +target,
       actual: +actual,
       appsConvertedPercentage: ((+actual / +target) * 20) / 100,
@@ -26,13 +25,7 @@ function AddAppsConverted() {
       <div className="form-style">
         <form onSubmit={onSubmit} className="kpi-tile">
           <div>
-            <label htmlFor="text">KPI</label>
-            <input
-              type="text"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              placeholder="Enter KPI Name..."
-            />
+            <label htmlFor="text">Applications Converted KPI</label>
           </div>
           <div>
             <label>Target</label>

@@ -24,6 +24,7 @@ function PercentResult() {
           {sales.map((sale) => {
             return (
               <div key={sale.id}>
+                <h4>Sales</h4>
                 <li>{sale.text}</li>
                 <li>{sale.target}</li>
                 <li>{sale.actual}</li>
@@ -34,22 +35,10 @@ function PercentResult() {
         </ul>
 
         <ul>
-          {freeCalls.map((freeCall) => {
-            return (
-              <div key={freeCall.id}>
-                <li>{freeCall.text}</li>
-                <li>{freeCall.target}</li>
-                <li>{freeCall.actual}</li>
-                <li>{freeCall.freeCallsPercentage * 100}%</li>
-              </div>
-            );
-          })}
-        </ul>
-
-        <ul>
           {totalCalls.map((totalCall) => {
             return (
               <div key={totalCall.id}>
+                <h4>Total Calls</h4>
                 <li>{totalCall.text}</li>
                 <li>{totalCall.target}</li>
                 <li>{totalCall.actual}</li>
@@ -60,13 +49,14 @@ function PercentResult() {
         </ul>
 
         <ul>
-          {nps.map((np) => {
+          {freeCalls.map((freeCall) => {
             return (
-              <div key={np.id}>
-                <li>{np.text}</li>
-                <li>{np.target}</li>
-                <li>{np.actual}</li>
-                <li>{np.npsPercentage * 100}%</li>
+              <div key={freeCall.id}>
+                <h4>Free Calls</h4>
+                <li>{freeCall.text}</li>
+                <li>{freeCall.target}</li>
+                <li>{freeCall.actual}</li>
+                <li>{freeCall.freeCallsPercentage * 100}%</li>
               </div>
             );
           })}
@@ -76,6 +66,7 @@ function PercentResult() {
           {appsConverted.map((appsConvert) => {
             return (
               <div key={appsConvert.id}>
+                <h4>Applications Converted</h4>
                 <li>{appsConvert.text}</li>
                 <li>{appsConvert.target}</li>
                 <li>{appsConvert.actual}</li>
@@ -84,6 +75,21 @@ function PercentResult() {
             );
           })}
         </ul>
+
+        <ul>
+          {nps.map((np) => {
+            return (
+              <div key={np.id}>
+                <h4>Net Promoter Score</h4>
+                <li>{np.text}</li>
+                <li>{np.target}</li>
+                <li>{np.actual}</li>
+                <li>{np.npsPercentage * 100}%</li>
+              </div>
+            );
+          })}
+        </ul>
+
         <div>
           <h1>Overall Score: {Math.floor(results)} %</h1>
         </div>

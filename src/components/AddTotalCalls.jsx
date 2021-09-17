@@ -13,7 +13,6 @@ function AddTotalCalls() {
 
     const newTotalCalls = {
       id: Math.floor(Math.random() * 100000000),
-      text,
       target: +target,
       actual: +actual,
       totalCallsPercentage: ((+actual / +target) * 10) / 100,
@@ -26,13 +25,7 @@ function AddTotalCalls() {
       <div className="form-style">
         <form onSubmit={onSubmit} className="kpi-tile">
           <div>
-            <label htmlFor="text">KPI</label>
-            <input
-              type="text"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              placeholder="Enter KPI Name..."
-            />
+            <label htmlFor="text">Total Calls Made KPI</label>
           </div>
           <div>
             <label>Target</label>
