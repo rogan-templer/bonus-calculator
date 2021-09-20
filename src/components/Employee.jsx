@@ -7,14 +7,13 @@ function Employee() {
   return (
     <>
       <form>
-        <label>Choose an employee:</label>
+        <label>Choose an employee: </label>
         <select>
           {employees.map((employee) => (
             <option key={employee.id}>{employee.name}</option>
           ))}
         </select>
       </form>
-      <h3>Add KPI Info</h3>
     </>
   );
 }

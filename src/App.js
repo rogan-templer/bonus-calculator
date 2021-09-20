@@ -15,7 +15,9 @@ function App() {
     <GlobalProvider>
       <div className="container">
         <Header />
-        <Employee />
+        <div className="flex justify-center m-4">
+          <Employee />
+        </div>
         <div className="grid grid-cols-3 gap-x-4 gap-y-4">
           <AddSales />
           <AddTotalCalls />
@@ -23,7 +25,8 @@ function App() {
           <AddAppsConverted />
           <AddNps />
         </div>
-        <div className="inline-flex">
+        <div className="">
+          <h4 className="flex justify-center m-4">Outcomes</h4>
           <PercentResult />
         </div>
       </div>
