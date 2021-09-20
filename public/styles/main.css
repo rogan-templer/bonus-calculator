@@ -13,11 +13,16 @@
   color: #ffffff;
   border-radius: 5px;
   padding: 5px;
+  font-size: 18px;
 }
 
 .form-style {
   display: block;
   text-align: center;
+}
+
+.results-output {
+  font-size: 16px;
 }
 
 html {

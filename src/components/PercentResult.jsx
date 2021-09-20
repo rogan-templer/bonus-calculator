@@ -32,7 +32,7 @@ function PercentResult() {
 
   return (
     <>
-      <div className="flex flex-wrap mt-3">
+      <div className="flex flex-wrap results-output mt-3">
         <div className="m-3">
           {sales.map((sale) => {
             return (
@@ -112,7 +112,7 @@ function PercentResult() {
             );
           })}
         </div>
-        <div className="m-3">
+        <div className="text-3xl m-3">
           <h1>Overall Score: {Math.floor(results)} %</h1>
         </div>
       </div>
