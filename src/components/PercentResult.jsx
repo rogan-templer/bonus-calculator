@@ -6,8 +6,6 @@ function PercentResult() {
     GlobalContext
   );
 
-  // console.log("sales", sales);
-
   const salesResults = sales.map((sale) => sale.salesPercentage);
   const totalCallsResult = totalCalls.map(
     (totalCall) => totalCall.totalCallsPercentage
@@ -27,8 +25,6 @@ function PercentResult() {
       +appsConvertedResult +
       +npsResult) *
     100;
-
-  // console.log("sales results", salesResults);
 
   return (
     <>
