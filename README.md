@@ -21,3 +21,6 @@ This will have the application running on http://localhost:3000
 The Tech used in this application is:
 - React.js
 - Tailwind CSS
+
+
+There is still some styling work to be undertaken on the project which will be updated in time and noted here when done so.  In the mean time though all the logic is working as should be and the remaining changes will be cosmetic in nature.
