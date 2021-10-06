@@ -12,7 +12,7 @@ npm install
 
 Then run:
 
-``
+```
 npm start
 ```
 
@@ -20,4 +20,4 @@ This will have the application running on http://localhost:3000
 
 The Tech used in this application is:
 - React.js
--Tailwind CSS
+- Tailwind CSS
