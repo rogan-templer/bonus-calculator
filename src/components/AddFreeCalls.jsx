@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 
 function AddFreeCalls() {
-  const [text, setText] = useState("");
+  // const [text, setText] = useState("");
   const [target, setTarget] = useState("");
   const [actual, setActual] = useState("");
 
